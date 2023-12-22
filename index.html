@@ -1,0 +1,55 @@
+<!--
+Using any of the tools you've worked with so far, create a game of Tic-Tac-Toe.
+Create a Tic-Tac-Toe game grid using your HTML element of choice.
+When a cell in the grid is clicked, an X or O should appear in that spot depending on whose turn it is.
+A heading should say whether it is X's or O's turn and change with each move made.
+A button should be available to clear the grid and restart the game.
+When a player has won, or the board is full and the game results in a draw, a Bootstrap alert or similar 
+Bootstrap component should appear across the screen announcing the winner.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    
+    <h1 id="turn">Tic-Tac-Toe</h1> <!-- This will pop on on top of the screen announcing this is a game of TicTacToe-->
+
+    <table class="game-board" id="board"> <!-- We can see our grid is created here with our HTMl table-->
+      <tr>
+        <td><button class="cell" onclick="makeMove(0)"></button></td>
+        <td><button class="cell" onclick="makeMove(1)"></button></td>
+        <td><button class="cell" onclick="makeMove(2)"></button></td>
+      </tr>
+      <tr>
+        <td><button class="cell" onclick="makeMove(3)"></button></td>
+        <td><button class="cell" onclick="makeMove(4)"></button></td>
+        <td><button class="cell" onclick="makeMove(5)"></button></td>
+      </tr>
+      <tr>
+        <td><button class="cell" onclick="makeMove(6)"></button></td>
+        <td><button class="cell" onclick="makeMove(7)"></button></td>
+        <td><button class="cell" onclick="makeMove(8)"></button></td>
+      </tr>
+    </table>
+  
+    <!-- This is how we will restart our game if we would like with a button labeled New Game -->
+    <button class="btn btn-danger" onclick="newGame()">New Game</button>
+  
+    <!-- Here we will have a bootstrap labeled message announcing our winner at the bottom of the page -->
+    <div class="alert alert-success text-decoration-underline text-dark-emphasis" id="result" style="display:none;"></div>
+  
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

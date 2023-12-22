@@ -1,0 +1,8 @@
+.cell { /* just a litte CSS to make the game large almost the size of the page when opened up and added a little pointer when 
+            when clicking an individual cell in our game*/
+    width: 200px; 
+    height: 200px;
+    border: 1px solid #711c1c;
+    font-size: 6em;
+    cursor: pointer;
+}
